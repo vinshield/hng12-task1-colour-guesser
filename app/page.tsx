@@ -109,7 +109,10 @@ export default function ColorGuessingGame() {
 
 			<Button
 				data-testid='newGameButton'
-				onClick={startNewGame}
+				onClick={() => {
+					setScore(0);
+					startNewGame();
+				}}
 				className='px-6 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 transition-colors'
 			>
 				New Game
